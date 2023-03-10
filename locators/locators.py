@@ -10,12 +10,17 @@ class MainPageLocators:
 
 class PopUp1Locators:
     CLOSE_POP_UP_BUTTON = (By.CSS_SELECTOR, 'div[datatest="close_popup1_from_quiz_input_tel"]')
+    CHECK_TEXT_POP_UP = (By.CSS_SELECTOR,'div[class="app570"]')
 
 class TariffPageLocators:
     CONNECT_TARIFF_BUTTON = (By.CSS_SELECTOR, 'div[datatest="providers_form_inspect_connect_tariff_button"]')
+    CHECK_ADRESS_TEXT = (By.CSS_SELECTOR,'h1[class="app88 app90"]')
 
 class OrderFormLocators:
     INPUT_NAME = (By.CSS_SELECTOR, 'input[datatest="providers_provider_order_input_name"]')
     INPUT_PHONE = (By.CSS_SELECTOR, 'input[datatest="providers_provider_order_input_tel"]')
     INPUT_CONNECT_BUTTON = (By.CSS_SELECTOR, 'div[data-test="order_form_input_connect_button"]')
+class CheckLocator:
+    CHECK_TEXT_ORDER_POP_UP = (By.CSS_SELECTOR, 'div[class="app121 app122"]')
+
 
