@@ -1,3 +1,4 @@
+import random
 import time
 import requests
 import pyautogui
@@ -36,15 +37,22 @@ class TestPage(BasePage):
             data.append(item.text)
         return str(data).lower()
 
-    def push_tarif_button(self):
-        self.elements_are_visible(self.locators.CONNECT_TARIFF_BUTTON).click()
+    def push_random_tariff_button(self):
+        tariff_buttons = self.elements_are_visible(self.locators.CONNECT_TARIFF_BUTTON)
+        random_tariff_button = tariff_buttons[random.randint(0, len(tariff_buttons)-1)]
+        random_tariff_button.click()
 
-    def field_order_forn(self):
+
+    def fill_order_form(self):
         name = 'Автотест'
         phone = '1111111111'
         self.element_is_visible(self.locators.INPUT_NAME).send_keys(name)
         self.element_is_visible(self.locators.INPUT_PHONE).send_keys(phone)
-        self.elements_are_visible(self.locators.INPUT_CONNECT_BUTTON).click()
+        self.element_is_visible(self.locators.INPUT_CONNECT_BUTTON).click()
+        time.sleep(3)
+        output_text = self.element_is_visible(self.locators.CHECK_TEXT_ORDER_POP_UP).text
+        print(output_text)
+        return (output_text)
 
 
 

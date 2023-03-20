@@ -14,6 +14,6 @@ class MainPageLocators:
     INPUT_NAME = (By.CSS_SELECTOR, 'input[datatest="providers_provider_order_input_name"]')
     INPUT_PHONE = (By.CSS_SELECTOR, 'input[datatest="providers_provider_order_input_tel"]')
     INPUT_CONNECT_BUTTON = (By.CSS_SELECTOR, 'div[data-test="order_form_input_connect_button"]')
-    CHECK_TEXT_ORDER_POP_UP = (By.CSS_SELECTOR, 'div[class="app121 app122"]')
+    CHECK_TEXT_ORDER_POP_UP = (By.CSS_SELECTOR, 'div[class="col-md-9 col-lg-8"]')
 
 
