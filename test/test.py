@@ -11,9 +11,14 @@ class TestField:
             test_main.clouse_pop_up()
             output_address_text = test_main.check_filled_adress()
             assert street in output_address_text
-            test_main.push_random_tariff_button()
-            output_text = test_main.fill_order_form()
-            assert 'Ваша заявка на подключение принята в работу' in output_text
+            count = 5
+            while count != 0:
+                test_main.push_random_tariff_button()
+                output_text = test_main.fill_order_form()
+                driver.back()
+                time.sleep(3)
+                count -= 1
+                assert 'Ваша заявка на подключение принята в работу' in output_text
 
 
 

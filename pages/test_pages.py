@@ -51,7 +51,6 @@ class TestPage(BasePage):
         self.element_is_visible(self.locators.INPUT_CONNECT_BUTTON).click()
         time.sleep(3)
         output_text = self.element_is_visible(self.locators.CHECK_TEXT_ORDER_POP_UP).text
-        print(output_text)
         return (output_text)
 
 
